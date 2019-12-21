@@ -7,7 +7,7 @@ services:
         ports:
           - "8090:80"
         volumes: 
-          - .:/usr/share/nginx/html
+          - ./nginx2:/usr/share/nginx/html
     nginx3:
         image: jokerdab/becadevops:nginx-3.0
         container_name: docker-compose-nginx3
@@ -15,4 +15,4 @@ services:
         ports:
           - "8091:80"
         volumes: 
-          - .:/usr/share/nginx/html
+          - ./nginx3:/usr/share/nginx/html

@@ -1,0 +1,8 @@
+version: '3'
+services:
+    nginx:
+        image: jokerdab/becadevops:nginx-3.0
+        container_name: nginx4
+        restart: always
+         ports:
+            - "8087:80"

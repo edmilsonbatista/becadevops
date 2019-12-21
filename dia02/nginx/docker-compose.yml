@@ -1,8 +1,14 @@
 version: '3'
 services:
-    nginx:
-        image: jokerdab/becadevops:nginx-3.0
-        container_name: nginx4
+    nginx2:
+        image: jokerdab/becadevops:nginx-2.0
+        container_name: docker-compose-nginx2
         restart: always
-         ports:
-            - "8087:80"
+        ports:
+          - "8090:80"
+    nginx3:
+        image: jokerdab/becadevops:nginx-3.0
+        container_name: docker-compose-nginx3
+        restart: always
+        ports:
+          - "8091:80"

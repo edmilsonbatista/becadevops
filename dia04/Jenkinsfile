@@ -1,0 +1,9 @@
+stage ("checkout:git") {
+    git branch: "master", url: ""
+}
+
+stage("Build:Maven") { 
+            steps {
+                sh 'mvn -B -DskipTests clean package' 
+            }
+        }

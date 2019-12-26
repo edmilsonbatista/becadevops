@@ -1,9 +1,15 @@
-stage ("checkout:git") {
-    git branch: "master", url: ""
-}
+pipeline {
+    agent any
+   
+    stages{
+        stage("checkout:git") {
+            git branch: "master", url: ""
+        }
 
-stage("Build:Maven") { 
-            steps {
-                sh 'mvn -B -DskipTests clean package' 
+        stage("Build:Maven") { 
+                    steps {
+                        sh 'mvn -B -DskipTests clean package' 
+                    }
+                }
             }
         }

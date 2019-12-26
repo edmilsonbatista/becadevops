@@ -2,11 +2,11 @@ pipeline {
     agent any
    
     stages{
-        stage("checkout:git") {
+        steps("checkout:git") {
             git branch: "master", url: ""
         }
 
-        stage("Build:Maven") { 
+        steps("Build:Maven") { 
                     steps {
                         sh 'mvn -B -DskipTests clean package' 
                     }

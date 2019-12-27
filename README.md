@@ -1,7 +1,7 @@
 # becadevops
 Beca DevOps - Everis 2019
 
-Temas aborados:
+Temas abordados:
 
 - Docker
 - Jenkins
